@@ -518,6 +518,11 @@
 				.addClass(node.state.selected ? 'node-selected' : '')
 				.addClass(node.searchResult ? 'search-result' : '') 
 				.attr('data-nodeid', node.nodeId)
+				/**
+				 * TODO:ICM-Customize: add customized attributes for customize operation, such as relocate the node after re-init.
+				 * We need revert our source code after fixed https://github.com/jonmiles/bootstrap-treeview/issues/50
+				 */
+				.attr('data-attributes', node.attributes)
 				.attr('style', _this.buildStyleOverride(node));
 
 			// Add indent/spacer to mimic tree structure
